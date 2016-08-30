@@ -13,6 +13,8 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText nameEditText ,surnameEditText ,userEditText , passEditText;
     private RadioGroup radioGroup;
     private RadioButton avta1RadioButton,avata2RadioButton,avata3RadioButton,avata4RadioButton, avata5RadioButton;
+    private String nameString,surnameString,userString, passwordSting, avataString;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +36,36 @@ public class SignUpActivity extends AppCompatActivity {
     }  //main method
 
     public void clickSignUpSign(View view) {
+    // get value from edit text
+        nameString = nameEditText.getText().toString().trim();
+        surnameString = surnameEditText.getText().toString().trim();
+        userString = userEditText.getText().toString().trim();
+        passwordSting = passEditText.getText().toString().trim();
 
+        // check space
 
+        if (checkSpace()) {
+
+            // true
+            MyAlert myAlert = new MyAlert();
+            myAlert.myDialog(this,R.drawable.nobita48,"กรอกข้อมูลไม่ครบ","กรุณากรอกข้อมูลให้ครบถ้วน");
+        }
 
     }  // click SignUp
+
+    private boolean checkSpace() {
+
+        boolean result = false;
+
+        if (    nameString.equals("")||
+                surnameString.equals("")||
+                userString.equals("")||
+                passwordSting.equals("")) {
+            result = true;
+        }
+
+        return result;
+
+    }
 
 } //main class
