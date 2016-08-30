@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="rd.natakorn.rdrun.SignUpActivity">
+    tools:context="rd.natakorn.rdrun.SignUpActivity"
+    android:background="@drawable/bg7">
 
     <Button
         android:layout_width="match_parent"
@@ -23,7 +24,8 @@
         android:text="@string/signup"
         android:id="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:textSize="@dimen/h1" />
+        android:textSize="@dimen/h1"
+        android:textColor="@color/text" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -31,9 +33,10 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/textView"
         android:layout_above="@+id/button3"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:padding="20dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        android:background="#82ffffff">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -47,14 +50,16 @@
                 android:id="@+id/textView3"
                 android:textSize="@dimen/h2"
                 android:textStyle="bold"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="@color/text" />
 
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText"
                 android:layout_weight="2"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="@color/text" />
         </LinearLayout>
 
         <LinearLayout
@@ -69,14 +74,16 @@
                 android:id="@+id/textView4"
                 android:textSize="@dimen/h2"
                 android:textStyle="bold"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="@color/text" />
 
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText3"
                 android:layout_weight="2"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="@color/text" />
         </LinearLayout>
 
         <LinearLayout
@@ -91,14 +98,16 @@
                 android:id="@+id/textView5"
                 android:textSize="@dimen/h2"
                 android:textStyle="bold"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="@color/text" />
 
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText4"
                 android:layout_weight="2"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="@color/text" />
         </LinearLayout>
 
         <LinearLayout
@@ -113,14 +122,16 @@
                 android:id="@+id/textView2"
                 android:textSize="@dimen/h2"
                 android:textStyle="bold"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="@color/text" />
 
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText2"
                 android:layout_weight="2"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="@color/text" />
         </LinearLayout>
 
         <TextView
@@ -136,7 +147,8 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -191,7 +203,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton2"
                 android:layout_weight="1"
-                android:layout_marginLeft="12dp" />
+                android:layout_marginLeft="11dp" />
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -205,14 +217,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton4"
                 android:layout_weight="1"
-                android:layout_marginLeft="12dp" />
+                android:layout_marginLeft="13dp" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton5"
                 android:layout_weight="1"
-                android:layout_marginLeft="12dp" />
+                android:layout_marginLeft="13dp" />
         </RadioGroup>
 
     </LinearLayout>
