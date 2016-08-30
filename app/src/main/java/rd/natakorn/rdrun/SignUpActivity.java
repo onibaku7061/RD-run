@@ -1,5 +1,7 @@
 package rd.natakorn.rdrun;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -95,8 +97,41 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void confirmValue() {
 
-    }
+        MyConstant myConstant = new MyConstant();
+        int[] avataInts = myConstant.getAvataInts();
 
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setIcon(avataInts[Integer.parseInt(avataString)]);
+        builder.setTitle("โปรดตรวจสอบข้อมูล");
+        builder.setMessage("Name = " + nameString + "\n" +
+                "Surname = " + surnameString + "\n" +
+                "User = " + userString + "\n" +
+                "Password = " + passwordSting + "\n");
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+        builder.setPositiveButton("Confrim", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                uploadValueToServer();
+                dialogInterface.dismiss();
+            }
+        });
+        builder.show();
+
+    }// confrim Value
+
+    private void uploadValueToServer() {
+
+
+
+    }// Up to Server
 
 
     private boolean checkChoose() {
