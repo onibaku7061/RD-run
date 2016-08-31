@@ -41,7 +41,7 @@
         android:layout_centerHorizontal="true"
         android:padding="50dp"
         android:gravity="center_horizontal"
-        android:background="#78000000">
+        android:background="#96000000">
 
         <ImageView
             android:layout_width="@dimen/icon"
