@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         //  Explicit
         private Context context;
         private String myUserString, mypasswordString , truePasswordString,
-                        nameString ,surnameString ,idString;
+                        nameString ,surnameString ,idString , avataString;
         private static final String urlJSON="http://swiftcodingthai.com/rd/get_user_master.php";
         private boolean statusABoolean = true;
 
@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                         nameString = jsonObject.getString("Name");
                         surnameString = jsonObject.getString("Surname");
                         idString = jsonObject.getString("id");
+                        avataString = jsonObject.getString("Avata");
                     }  // Ifse
 
                 }  // For
@@ -119,6 +120,12 @@ public class MainActivity extends AppCompatActivity {
                 } else if (mypasswordString.equals(truePasswordString)) {
                     // Password True
                     Intent intent = new Intent(MainActivity.this,ServiceActivity.class);
+
+                    intent.putExtra("id", idString);
+                    intent.putExtra("Avata", avataString);
+                    intent.putExtra("Name", nameString);
+                    intent.putExtra("Surname", surnameString);
+
                     startActivity(intent);
 
 
