@@ -118,6 +118,10 @@ public class MainActivity extends AppCompatActivity {
                             "ไม่มี " + myUserString + " อยู่ในฐานข้อมูล");
                 } else if (mypasswordString.equals(truePasswordString)) {
                     // Password True
+                    Intent intent = new Intent(MainActivity.this,ServiceActivity.class);
+                    startActivity(intent);
+
+
                     Toast.makeText(context,"Wellcome "+ nameString+" "+surnameString,Toast.LENGTH_SHORT).show();
 
                 } else {
