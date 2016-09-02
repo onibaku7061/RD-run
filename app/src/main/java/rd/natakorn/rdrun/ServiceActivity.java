@@ -12,6 +12,7 @@ import android.support.annotation.IntegerRes;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -89,6 +90,27 @@ public class ServiceActivity extends FragmentActivity implements OnMapReadyCallb
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }  // Main Method
+
+    public void clickNomal(View view) {
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+    }
+
+    public void clickSatellite(View view) {
+        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+
+    }
+
+    public void clickTerrain(View view) {
+        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+
+    }
+
+    public void clickHybrid(View view) {
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+
+    }
+
 
     private class SynAllUser extends AsyncTask<Void, Void, String>{
         //  Explicit
